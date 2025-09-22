@@ -17,7 +17,7 @@ const Products: React.FC = () => {
       id: 1,
       name: 'Whole Fresh Chicken',
       description: 'Premium quality whole chicken, fresh from our farm, perfect for family meals and special occasions.',
-      image: '/api/placeholder/400/300',
+      image: '/images/chicken.png',
       features: ['Halal Certified', 'Fresh Daily', 'No Antibiotics', 'Free Range'],
       category: 'whole'
     },
@@ -25,7 +25,7 @@ const Products: React.FC = () => {
       id: 2,
       name: 'Chicken Thighs',
       description: 'Tender and juicy chicken thighs, ideal for grilling, baking, or slow cooking.',
-      image: '/api/placeholder/400/300',
+      image: '/images/chickenThighs.png',
       features: ['Halal Certified', 'Premium Cut', 'Tender & Juicy', 'Versatile'],
       category: 'cuts'
     },
@@ -33,7 +33,7 @@ const Products: React.FC = () => {
       id: 3,
       name: 'Chicken Wings',
       description: 'Perfectly sized chicken wings, great for appetizers, parties, or casual dining.',
-      image: '/api/placeholder/400/300',
+      image: '/images/chickenWings.png',
       features: ['Halal Certified', 'Party Perfect', 'Crispy Skin', 'Flavorful'],
       category: 'cuts'
     },
@@ -41,7 +41,7 @@ const Products: React.FC = () => {
       id: 4,
       name: 'Chicken Breast',
       description: 'Lean and protein-rich chicken breast, perfect for healthy meals and fitness enthusiasts.',
-      image: '/api/placeholder/400/300',
+      image: '/images/chickenBreast.png',
       features: ['Halal Certified', 'Lean Protein', 'Low Fat', 'High Protein'],
       category: 'cuts'
     },
@@ -49,7 +49,7 @@ const Products: React.FC = () => {
       id: 5,
       name: 'Chicken Drumsticks',
       description: 'Flavorful chicken drumsticks with bone-in for maximum taste and nutrition.',
-      image: '/api/placeholder/400/300',
+      image: '/images/chickenDrumsticks.png',
       features: ['Halal Certified', 'Bone-In', 'Flavorful', 'Nutritious'],
       category: 'cuts'
     },
@@ -57,7 +57,7 @@ const Products: React.FC = () => {
       id: 6,
       name: 'Chicken Giblets',
       description: 'Fresh chicken giblets including liver, heart, and gizzard, perfect for traditional recipes.',
-      image: '/api/placeholder/400/300',
+      image: '/images/chickenGiblets.png',
       features: ['Halal Certified', 'Traditional', 'Nutritious', 'Versatile'],
       category: 'specialty'
     }
@@ -120,7 +120,9 @@ const Products: React.FC = () => {
             {filteredProducts.map((product) => (
               <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden group hover:shadow-lg transition-shadow">
                 <div className="aspect-video bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
-                  <span className="text-6xl">🐔</span>
+                  <span className="text-6xl">
+                    <img src={product.image}/>
+                  </span>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{product.name}</h3>
@@ -195,7 +197,7 @@ const Products: React.FC = () => {
             
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center">
-                <span className="text-8xl">🏆</span>
+                <span className="text-8xl"><img src='images/qualityAssurance.png' style={{borderRadius:'8px'}}/></span>
               </div>
             </div>
           </div>

@@ -22,7 +22,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="bg-white shadow-sm sticky top-0 z-50">
+      <header className="bg-white shadow-sm sticky top-0 z-50" style={{padding:'0 8px'}}>
         <div className="container-max">
           <div className="flex justify-between items-center py-4">
             {/* Logo */}

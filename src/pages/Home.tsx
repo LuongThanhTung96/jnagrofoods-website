@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+// import halalLogo from '../public/images/halaLogo.png';
 
 const Home: React.FC = () => {
   const whyChooseUs = [
@@ -26,10 +27,10 @@ const Home: React.FC = () => {
   ]
 
   const galleryImages = [
-    { src: '/api/placeholder/300/200', alt: 'Modern chicken farm facility' },
-    { src: '/api/placeholder/300/200', alt: 'Quality control laboratory' },
-    { src: '/api/placeholder/300/200', alt: 'Professional staff at work' },
-    { src: '/api/placeholder/300/200', alt: 'Fresh chicken products' }
+    { src: '/images/modernChickenFarmFacility.jpg', alt: 'Modern chicken farm facility' },
+    { src: '/images/qualityControlLaboratory.jpg', alt: 'Quality control laboratory' },
+    { src: '/images/professionalStaffAtWork.jpg', alt: 'Professional staff at work' },
+    { src: '/images/freshChickenProducts.jpg', alt: 'Fresh chicken products' }
   ]
 
   return (
@@ -58,7 +59,7 @@ const Home: React.FC = () => {
             <div className="relative">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
                 <div className="aspect-video bg-white/20 rounded-lg flex items-center justify-center">
-                  <span className="text-6xl">🐔</span>
+                  <span className="text-6xl"><img src='images/logoHalal.png' alt="Halal Logo" style={{borderRadius:'8px'}}/></span>
                 </div>
                 <div className="mt-4 text-center">
                   <p className="text-green-100 font-semibold">Fresh from our farm</p>
@@ -125,7 +126,7 @@ const Home: React.FC = () => {
               <div key={index} className="group cursor-pointer">
                 <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden group-hover:shadow-lg transition-shadow">
                   <div className="w-full h-full bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
-                    <span className="text-4xl">🏭</span>
+                    <span className="text-4xl"><img src={image.src} /></span>
                   </div>
                 </div>
                 <p className="mt-2 text-sm text-gray-600 text-center">{image.alt}</p>

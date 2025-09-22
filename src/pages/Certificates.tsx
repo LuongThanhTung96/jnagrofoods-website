@@ -23,7 +23,7 @@ const Certificates: React.FC = () => {
       issuer: 'Islamic Food and Nutrition Council of America (IFANCA)',
       validUntil: 'December 31, 2025',
       certificateNumber: 'HAL-2024-001234',
-      image: '/api/placeholder/400/300',
+      image: '/images/halalCertifiedFarm.jpg',
       pdfUrl: '/certificates/halal-farm-certificate.pdf',
       significance: 'This certification ensures that our entire farming operation, from feed to housing to processing, follows strict Halal guidelines as prescribed by Islamic law.'
     },
@@ -34,7 +34,7 @@ const Certificates: React.FC = () => {
       issuer: 'Halal Monitoring Authority (HMA)',
       validUntil: 'December 31, 2025',
       certificateNumber: 'HMA-2024-567890',
-      image: '/api/placeholder/400/300',
+      image: '/images/halalCertifiedChickenProducts.jpg',
       pdfUrl: '/certificates/halal-chicken-certificate.pdf',
       significance: 'This certification covers all our chicken products, ensuring they are prepared, processed, and packaged according to Islamic dietary laws.'
     },
@@ -45,7 +45,7 @@ const Certificates: React.FC = () => {
       issuer: 'International Organization for Standardization (ISO)',
       validUntil: 'December 31, 2025',
       certificateNumber: 'ISO-22000-2024-001',
-      image: '/api/placeholder/400/300',
+      image: '/images/iso22000.png',
       pdfUrl: '/certificates/iso22000-certificate.pdf',
       significance: 'ISO 22000 is an international standard that specifies requirements for a food safety management system, ensuring safe food production and handling throughout the food chain.'
     }
@@ -87,7 +87,7 @@ const Certificates: React.FC = () => {
                 onClick={() => setSelectedCert(certificate.id)}
               >
                 <div className="aspect-video bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center">
-                  <span className="text-6xl">📜</span>
+                  <span className="text-6xl" style={{padding:'8px'}}><img src={certificate.image} style={{height: '380px', width: '100%', borderRadius: '8px'}}/></span>
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{certificate.title}</h3>
@@ -136,7 +136,7 @@ const Certificates: React.FC = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                 <div>
                   <div className="aspect-video bg-gradient-to-br from-green-100 to-green-200 rounded-lg flex items-center justify-center mb-6">
-                    <span className="text-8xl">📜</span>
+                    <span className="text-8xl"><img src={selectedCertificate.image} /></span>
                   </div>
                   
                   <div className="space-y-4">

@@ -85,7 +85,9 @@ const About: React.FC = () => {
             </div>
             <div className="relative">
               <div className="aspect-square bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center">
-                <span className="text-8xl">🏭</span>
+                <span className="text-8xl" style={{padding: '15px 30px', height: '85%'}}>
+                  <img src='images/factory.png' alt="Halal Logo" style={{width:'100%',height: '100%', objectFit: 'cover', borderRadius: '16px'}}/>
+                </span>
               </div>
             </div>
           </div>
